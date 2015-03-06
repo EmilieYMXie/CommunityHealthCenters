@@ -22,5 +22,5 @@ for (var i = 0; i < centers.length; i++) {
 	/*
 	 * Popup
 	 */
-	//marker.bindPopup("<b>"+individualWarmingShelters.FullAddress+"</b><br>"+individualWarmingShelters.ProgramName);//openPopup will open all popups .openPopup()
+	marker.bindPopup("<b>"+individualCenters.FullAddress+"</b><br>"+individualCenters.NameofCenter);//openPopup will open all popups .openPopup()
 }//end of for loop
