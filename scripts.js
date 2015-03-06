@@ -9,3 +9,18 @@ var map = L.map('leafletMap').setView([40.81008, -73.95709], 13);
 L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png', {
 	attribution : '&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
+var centers = healthCenters.rows;
+
+for (var i = 0; i < centers.length; i++) {
+	var individualCenters = centers[i];
+	/*
+	 * Marker
+	 */
+	var marker = L.marker([individualCenters.Latitude, individualCenters.Longitude]).addTo(map);
+
+	/*
+	 * Popup
+	 */
+	//marker.bindPopup("<b>"+individualWarmingShelters.FullAddress+"</b><br>"+individualWarmingShelters.ProgramName);//openPopup will open all popups .openPopup()
+}//end of for loop
